@@ -1,4 +1,4 @@
-# Recall AI: AI-Powered Flashcard Generator
+# FlashBridge: AI-Powered Flashcard Generator and Exporter
 
 [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
 [![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)](https://cloud.google.com/)
@@ -7,7 +7,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 
-Recall AI is a full-stack web application that automates the creation of flashcard decks from various content sources like audio lectures, documents, and raw text, using generative AI.
+FlashBridge is a full-stack web application that automates the creation of flashcard decks from various content sources like audio lectures, documents, and raw text, and exports them to popular study platforms (Anki, Quizlet, etc.)
 
 ---
 
@@ -131,11 +131,11 @@ Follow these instructions to set up and run the project locally.
 2.  **Firebase Setup**:
     - Create a new Firebase project.
     - Enable Authentication (Email/Password), Firestore, and Storage.
-    - Get your Firebase project configuration keys and place them in a `.env.local` file in the `recall-ai-app/` directory. See `.env.example`.
+    - Get your Firebase project configuration keys and place them in a `.env.local` file in the `flashbridge-app/` directory. See `.env.example`.
 
 3.  **Frontend Setup**:
     ```bash
-    cd recall-ai-app
+    cd flashbridge-app
     npm install
     ```
 
@@ -158,8 +158,8 @@ Follow these instructions to set up and run the project locally.
 1.  **Start the AI Service**:
     ```bash
     # From the ai-service/ directory
-    docker build -t recall-ai-service .
-    docker run -p 8080:8080 -e PORT=8080 --env-file .env recall-ai-service
+    docker build -t flashbridge-service .
+    docker run -p 8080:8080 -e PORT=8080 --env-file .env flashbridge-service
     ```
 
 2.  **Start the Firebase Emulators**:
@@ -170,7 +170,7 @@ Follow these instructions to set up and run the project locally.
 
 3.  **Start the Next.js Frontend**:
     ```bash
-    # From the recall-ai-app/ directory, in a new terminal
+    # From the flashbridge-app/ directory, in a new terminal
     npm run dev
     ```
     Your application should now be running on `http://localhost:3000`.
@@ -181,7 +181,7 @@ Follow these instructions to set up and run the project locally.
 .
 ├── ai-service/             # Python AI microservice (Flask/FastAPI, Docker)
 ├── functions/              # Firebase Cloud Functions (TypeScript)
-├── recall-ai-app/          # Next.js frontend application
+├── flashbridge-app/          # Next.js frontend application
 ├── firebase.json           # Firebase project configuration
 └── firestore.rules         # Security rules for Firestore database
 ```
