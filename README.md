@@ -13,7 +13,6 @@ FlashBridge is a full-stack web application that automates the creation of flash
 
 ## Table of Contents
 - [Project Overview](#project-overview)
-- [Demo](#demo)
 - [Architecture](#architecture)
 - [Key Features](#key-features)
 - [Tech Stack & Rationale](#tech-stack--rationale)
@@ -27,13 +26,6 @@ FlashBridge is a full-stack web application that automates the creation of flash
 ## Project Overview
 
 This project solves the time-consuming problem of manual flashcard creation. It provides a platform where students and professionals can upload their learning materials and receive ready-to-study flashcard decks in minutes. The application is built on a modern, scalable, and distributed architecture, combining a Next.js frontend, a serverless Firebase backend, and a containerized Python AI microservice.
-
-## Demo
-
-**[Link to your live application here]**
-
-*(Consider adding a GIF or screenshot of the app in action)*
-![App Screenshot](https://placehold.co/800x400/2d3748/ffffff?text=App+Screenshot+Here)
 
 ## Architecture
 
